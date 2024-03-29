@@ -9,7 +9,9 @@ create table if not exists users (
     privilege varchar(255)
 );
 
-use university;
-select * from users;
-
-drop table users;
+create table attendance(
+	id int auto_increment primary key,
+    username varchar(255),
+    date datetime default now(),
+    status varchar(255)
+);
